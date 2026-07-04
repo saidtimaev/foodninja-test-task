@@ -29,7 +29,7 @@
 
 ### 1. Клонирование репозитория 
 ```bash
-git clone [https://github.com/your-username/food-ninja-test.git](https://github.com/your-username/food-ninja-test.git)
+git clone [https://github.com/saidtimaev/foodninja-test-task.git](https://github.com/saidtimaev/foodninja-test-task.git)
 cd food-ninja-test
 cp .env.example .env
 ```
