@@ -18,5 +18,10 @@ fi
 echo "Запускаю миграции базы данных..."
 php artisan migrate --force 
 
-echo "Запускаю веб-сервер..."
-exec php artisan serve --host=0.0.0.0 --port=8000
+if [ "$1" = "queue" ]; then
+    echo "Запускаю обработчик очередей (Queue Worker)..."
+    exec php artisan queue:work --verbose --tries=3
+else
+    echo "Запускаю веб-сервер..."
+    exec php artisan serve --host=0.0.0.0 --port=8000
+fi

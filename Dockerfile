@@ -26,8 +26,8 @@ COPY . /var/www
 
 RUN chown -R www-data:www-data /var/www
 
-RUN chmod +x /var/www/docker/entrypoint.sh
+RUN chmod +x /var/www/Docker/entrypoint.sh
 
 USER www-data
 
-ENTRYPOINT ["/var/www/docker/entrypoint.sh"]
+ENTRYPOINT ["/var/www/Docker/entrypoint.sh"]
